@@ -119,7 +119,7 @@ init_arr = [None for _ in range(5)]
 init_arr = add2("embraer", init_arr)
 init_arr = add2( "boeing", init_arr)
 init_arr = add2("embraerr", init_arr)
-print('xyu')
+
 init_arr = add2( "learjet", init_arr)
 
 print(init_arr)
