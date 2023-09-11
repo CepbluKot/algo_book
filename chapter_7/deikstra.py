@@ -1,12 +1,26 @@
 init_graph = {}
-init_graph["a"] = {"b": 6, "c": 2}
-init_graph["b"] = {"c": 2, "d": 3}
-init_graph["c"] = {"d": 10}
-init_graph["d"] = {"a": 11}
+# init_graph["a"] = {"b": 6, "c": 2}
+# init_graph["b"] = {"c": 2, "d": 3}
+# init_graph["c"] = {"d": 10}
+# init_graph["d"] = {"a": 11}
 
+
+init_graph["a"] = {"b": 4, "e": 5, "f":1}
+init_graph["b"] = {"c": 3, "d":1}
+init_graph["e"] = {"g": 99}
+init_graph["f"] = {"l": 99}
+init_graph["c"] = {"g": 1}
+init_graph["d"] = {"c": 1}
+init_graph["g"] = {"k": 4}
+init_graph["l"] = {}
+init_graph["k"] = {"m": 8}
+init_graph["m"] = {"r": 22, "q": 2}
+init_graph["r"] = {"z": 11}
+init_graph["z"] = {}
+init_graph["q"] = {}
 
 init_point_from = "a"
-init_point_to = "d"
+init_point_to = "z"
 
 
 def deikstraSearchRecursive(
