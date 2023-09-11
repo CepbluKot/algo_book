@@ -20,7 +20,7 @@ def parseElems(arr: list, elem_id: int):
     smaller = []
     greater = []
 
-    for x in arr[:elem_id] + arr[elem_id+1:]:
+    for x in arr[:elem_id] + arr[elem_id + 1 :]:
         if x >= arr[elem_id]:
             greater.append(x)
         else:
@@ -32,12 +32,12 @@ def parseElems(arr: list, elem_id: int):
 def recursionJob(arr: list):
     if checkIsBaseCase(arr):
         return baseCaseJob(arr)
-    
+
     else:
         relative_elem_id = len(arr) // 2
         smaller, greater = parseElems(arr, relative_elem_id)
 
         return recursionJob(smaller) + [arr[relative_elem_id]] + recursionJob(greater)
-    
+
 
 print(recursionJob(init_arr))

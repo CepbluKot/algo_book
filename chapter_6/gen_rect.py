@@ -7,4 +7,3 @@ def genRect(width: int, length: int):
             rect_dict[str(y)].append(str(x))
 
     return rect_dict
-

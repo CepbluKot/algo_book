@@ -2,7 +2,7 @@ from random import randint, choice
 
 
 initial_list = [randint(0, 10) for _ in range(10)]
-print('before ', initial_list)
+print("before ", initial_list)
 
 sorte = []
 
@@ -18,4 +18,4 @@ while initial_list:
     sorte.append(initial_list[max_elem_id])
     del initial_list[max_elem_id]
 
-print('after ', sorte)
+print("after ", sorte)

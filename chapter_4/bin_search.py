@@ -9,6 +9,7 @@ init_arr.sort()
 def isBaseCase(begin: int, end: int):
     return end - begin == 1
 
+
 def baseCaseJob(arr: list, begin: int, end: int, elem_to_find: int):
     if arr[begin] == elem_to_find:
         return begin
@@ -16,8 +17,9 @@ def baseCaseJob(arr: list, begin: int, end: int, elem_to_find: int):
     elif arr[end] == elem_to_find:
         return end
 
+
 def recursiveCase(arr: list, begin: int, end: int, elem_to_find: int):
-    print('\n begin with: ',arr[begin:end+1], elem_to_find)
+    print("\n begin with: ", arr[begin : end + 1], elem_to_find)
 
     select = (begin + end) // 2
 
@@ -32,11 +34,10 @@ def recursiveCase(arr: list, begin: int, end: int, elem_to_find: int):
             end = select
             return recursiveCase(arr, begin, end, elem_to_find)
 
-        elif arr[select] < elem_to_find:            
+        elif arr[select] < elem_to_find:
             begin = select
             return recursiveCase(arr, begin, end, elem_to_find)
 
 
-
 # print('returned: ', recursiveCase(init_arr, 0, len(init_arr), choice(init_arr)))
-print('returned: ', recursiveCase(init_arr, 0, len(init_arr), sorted(init_arr)[0]))
+print("returned: ", recursiveCase(init_arr, 0, len(init_arr), sorted(init_arr)[0]))

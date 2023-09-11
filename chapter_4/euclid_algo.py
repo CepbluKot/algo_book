@@ -3,7 +3,7 @@ init_width = 640
 
 
 def checkIsBaseCase(length, width):
-    return not length % width or not width % length 
+    return not length % width or not width % length
 
 
 def recursionJob(length, width):
@@ -17,5 +17,6 @@ def recursionJob(length, width):
             return recursionJob(length, width)
 
     return min(length, width)
+
 
 print(recursionJob(init_length, init_width))
