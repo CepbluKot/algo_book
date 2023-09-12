@@ -5,22 +5,17 @@ init_graph = {}
 # init_graph["d"] = {"a": 11}
 
 
-init_graph["a"] = {"b": 4, "e": 5, "f":1}
-init_graph["b"] = {"c": 3, "d":1}
-init_graph["e"] = {"g": 99}
-init_graph["f"] = {"l": 99}
-init_graph["c"] = {"g": 1}
-init_graph["d"] = {"c": 1}
-init_graph["g"] = {"k": 4}
-init_graph["l"] = {}
-init_graph["k"] = {"m": 8}
-init_graph["m"] = {"r": 22, "q": 2}
-init_graph["r"] = {"z": 11}
-init_graph["z"] = {}
-init_graph["q"] = {}
+# init_graph["a"] = {"b": 2}
+# init_graph["b"] = {"c": 3}
+# init_graph["c"] = {"a": 8}
 
-init_point_from = "a"
-init_point_to = "z"
+init_graph["book"] = {"plastina": 5, "poster": 0}
+init_graph["plastina"] = {"poster": -7}
+init_graph["poster"] = {"baraban": 35}
+init_graph["baraban"] = {}
+
+init_point_from = "book"
+init_point_to = "baraban"
 
 
 def deikstraSearchRecursive(
