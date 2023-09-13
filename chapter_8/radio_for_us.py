@@ -19,24 +19,24 @@ used_radios = []
 
 
 max_radio_cover = len(all_states.difference(covered).difference(set(all_radios[list(all_radios.keys())[0]])))
-max_radio_name = list(all_radios.keys())[0]
+min_radio_name = list(all_radios.keys())[0]
 
 while not (covered == all_states) and all_radios:
     for radio in all_radios:
         curr_diff = len(all_states.difference(covered).difference(set(all_radios[radio])))
         if curr_diff < max_radio_cover:
             max_radio_cover = curr_diff
-            max_radio_name = radio
+            min_radio_name = radio
 
-    for state in all_radios[max_radio_name]:
+    for state in all_radios[min_radio_name]:
         covered.add(state)
     
-    used_radios.append(max_radio_name)
+    used_radios.append(min_radio_name)
 
-    all_radios.pop(max_radio_name)
+    all_radios.pop(min_radio_name)
 
     max_radio_cover = len(all_states.difference(covered).difference(set(all_radios[list(all_radios.keys())[0]])))
-    max_radio_name = list(all_radios.keys())[0]
+    min_radio_name = list(all_radios.keys())[0]
 
 
 
