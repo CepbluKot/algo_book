@@ -1,8 +1,10 @@
 from random import randint, choice
 
 
-init_arr = [randint(0, 10) for _ in range(10)]
-
+# init_arr = [randint(0, 10) for _ in range(10)]
+init_arr = [3,3,3,3,3]
+# n = int(input()) # n elems of arr
+# init_arr = list(map(int, input().split()))
 
 def checkIsBaseCase(arr: list):
     return len(arr) <= 2
@@ -40,4 +42,4 @@ def recursionJob(arr: list):
         return recursionJob(smaller) + [arr[relative_elem_id]] + recursionJob(greater)
 
 
-print(recursionJob(init_arr))
+print(*recursionJob(init_arr))
